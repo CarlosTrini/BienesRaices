@@ -1,0 +1,670 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /** Reset para REMS - 62.5% = 10px de 16px **/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+h4 {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
+
+/* +++++++++++ UTILIDADES +++++++++++++++++ */
+.contenedor1 {
+    max-width: 1100px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contenedor2 {
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.linea {
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.textos {
+    font-weight: 300;
+    text-transform: capitalize;
+    margin-top: 3.5rem;
+}
+
+.textos::after {
+    content: "";
+    margin: .3rem auto;
+    display: block;
+    width: 10%;
+    height: .3rem;
+    background-color: blue;
+}
+
+/* +++++++++++++++++++ HEADER  +++++++++++++++++++++++ */
+header {
+    background: black;
+}
+
+.fondo {
+    max-width: 100%;
+    height: 100vh;
+    min-height: 50rem;
+    background-image: url("../img/header.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.site-header {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.flex-header {
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+nav>a {
+    text-align: center;
+    display: block;
+    font-size: 1.8rem;
+    color: aliceblue;
+    font-family: 'Sansita Swashed', cursive;
+    margin-bottom: 1rem;
+}
+
+nav>a:last-of-type {
+    margin-bottom: 0;
+}
+
+nav>a::after {
+    content: "";
+    margin: .3rem auto;
+    display: block;
+    width: 20%;
+    height: .3rem;
+    background-color: antiquewhite;
+}
+
+nav>a:hover {
+    color: burlywood;
+    text-shadow: 3px 3px black;
+}
+
+.resaltado {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+
+    .flex-header {
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    nav>a {
+        margin-bottom: 0;
+        margin-left: 2rem;
+    }
+
+    .site-header>div:last-of-type {
+        margin: auto;
+        width: 60%;
+    }
+
+    .resaltado {
+        line-height: 7rem;
+        font-size: 3.5rem;
+        text-transform: capitalize;
+    }
+
+    .resaltado::after {
+        content: "";
+        display: block;
+        width: 70%;
+        height: 3px;
+        margin: auto;
+        background-color: #fff;
+    }
+}
+
+/* ++++++++++++++++++++  SOBRE NOSOTROS +++++++++++++++++++++ */
+
+.card-info {
+    margin-bottom: 3rem;
+    padding: 1rem;
+}
+
+.card-info>p {
+    font-size: 2rem;
+    padding-left: 1.3rem;
+}
+
+.card-info:hover {
+    border-bottom: 1px solid #aaf;
+    border-right: 1px solid #aaf;
+    box-shadow: 1px 1px 8px #aaf;
+    border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+    .card {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    .card-info {
+        margin-right: 2rem;
+        flex: 1;
+    }
+
+    .card>div:last-of-type {
+        margin-right: 0;
+    }
+
+    .card-info>p {
+        font-size: 2rem;
+        text-align: left;
+
+    }
+}
+
+/* ++++++++++++++++++++  ANUNCIOS DE CASA +++++++++++++++++++++ */
+
+.card-info-anuncios {
+    display: flex;
+    flex-direction: column;
+    border: .5px solid grey;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: center;
+    background: #ffd;
+
+}
+
+.card-info-anuncios>figure>img:hover {
+    transform: scale(1.2, 1.2);
+    border-radius: 20px;
+    transition: transform 2s ease-in-out;
+}
+
+.card-info-anuncios>p,
+span {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+}
+
+.card-info-anuncios>span {
+    color: orange;
+    display: inline-block;
+    margin-bottom: 1rem;
+
+}
+
+.card-info-anuncios>ul>li {
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+}
+
+.card-info-anuncios>ul {
+    width: 80%;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mar-r {
+    margin-right: .5rem;
+}
+
+.boton-card-propiedades {
+
+    width: 100%;
+    padding: 1rem 2rem;
+    background: blue;
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.boton-card-propiedades:hover {
+    /* background: linear-gradient(to top, blue,  #99f); */
+
+    height: 100%;
+    background-color: #99f;
+    color: black;
+    transition: all 1s ease;
+
+}
+
+
+@media (min-width: 768px) {
+    .card-anuncios {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+
+    }
+
+    .card-info-anuncios>figure>img:hover {
+        transform: scale(2.0, 2.0);
+        border-radius: 20px;
+        transition: transform 2s ease-in-out;
+
+    }
+
+    .card-info-anuncios {
+        display: flex;
+        flex-direction: column;
+        border: .5px solid grey;
+        margin-right: 2rem;
+        flex: 0 0 calc(32% - 1rem);
+    }
+
+    .card-info-anuncios>div:last-of-type {
+        margin: 0;
+    }
+
+    .boton-externo {
+        margin-top: 2rem;
+
+        text-align: end;
+    }
+
+}
+
+/* ++++++++++++++++++++  ANUNCIOS DE CASA +++++++++++++++++++++ */
+
+.banner {
+    margin-top: 5rem;
+    background-image: url("../img/encuentra.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textos-banner {
+
+    color: #fff;
+    margin-left: 2rem;
+}
+
+.textos-banner>p {
+    font-size: 1.5rem;
+}
+
+.boton-banner {
+    display: block;
+    text-align: center;
+    padding: 1rem 2rem;
+    background-color: orange;
+    color: #fff;
+    font-size: 2rem;
+    width: 90%;
+
+}
+
+.boton-banner:hover {
+    background: linear-gradient(to right, #a5f, orange);
+    transform: scale(1.1, 1.1);
+}
+
+@media (min-width: 768px) {
+    .boton-banner {
+        text-align: center;
+        padding: 1rem 1rem;
+        max-width: 20%;
+        width: 15rem;
+
+    }
+}
+
+/* ************************************ BLOG Y TESTIMONIALES   *********************************************** */
+
+
+
+.card-blog {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.card-blog>figure {
+    width: 100%;
+}
+
+.card-blog>div>p {
+    font-size: 2rem;
+}
+
+.card-blog>div>p>span {
+    font-size: 2rem;
+    color: orange;
+}
+
+.testimoniales {
+    flex-basis: calc(50% - 2rem);
+    text-align: center;
+
+}
+
+.testimoniales>div {
+    margin-top: 3rem;
+}
+
+blockquote {
+    margin: 0 auto;
+    background-color: #fa0;
+    border-radius: 2rem;
+    padding: 4rem;
+    font-size: 2rem;
+    position: relative;
+
+}
+
+blockquote>p {
+    font-size: 2rem;
+    line-height: 4rem;
+
+}
+
+.testimoniales>div>blockquote>p::before {
+    content: url("../img/comilla.svg");
+    width: 5rem;
+    position: absolute;
+    left: .5px;
+}
+
+.testimoniales>div>blockquote>span {
+    display: block;
+
+    text-align: end;
+    font-size: 2rem;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+    .blog-testimoniales {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .seccion-blog {
+
+        flex-basis: 50%;
+    }
+
+    .card-blog {
+        display: flex;
+
+    }
+
+    .card-blog>div>p {
+        font-size: 1.5rem;
+    }
+
+    .card-blog>div>p>span {
+        font-size: 1.5rem;
+        color: orange;
+    }
+
+    .blog-footer {
+        margin-left: 1rem;
+    }
+
+    .testimoniales {
+        flex-basis: calc(45% - 2rem);
+
+
+    }
+
+    blockquote {
+        padding: 5rem;
+
+
+    }
+}
+
+/* ++++++++++++++++++++++++++++++++++++++ footer ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+footer {
+    margin-top: 4rem;
+    background: black;
+}
+
+.site-footer {
+    color: white;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.site-footer>div {
+    font-size: 2rem;
+
+}
+
+@media (min-width: 768px) {
+    .site-footer {
+        flex-direction: row;
+    }
+
+    .site-footer>div {
+        order: 1;
+    }
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++Nosotros+++++++++++++++++++++++++++ */
+.nosotros>article>span {
+    display: block;
+    font-weight: 700;
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+
+}
+
+.nosotros>article>p {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 2.8rem;
+}
+
+@media (min-width: 768px) {
+    .nosotros {
+        display: flex;
+    }
+
+    .nosotros>figure {
+        width: 50%;
+    }
+
+    .nosotros>article>span {
+
+        text-align: left;
+
+    }
+
+    .nosotros>article {
+        margin-left: 2rem;
+        flex-basis: calc(50% - 2rem);
+    }
+}
+
+/* ************************** ANUNCIO +++++++++++++++++ */
+.site-anuncio {
+    background: cyan;
+}
+
+.fondo-anuncio {
+
+    max-width: 100%;
+
+}
+
+.card-info-anuncio>ul {
+    display: flex;
+    padding: 0;
+    justify-content: space-around;
+    font-size: 2rem;
+
+}
+
+.card-info-anuncio>span {
+    display: block;
+
+    font-size: 3rem;
+
+}
+
+.card-info-anuncio>p {
+    font-size: 2rem;
+}
+
+/* ***************************************** BLOG ************************** */
+.blog {
+    display: flex;
+    justify-content: center;
+}
+
+/*  ***************************** CONTACTO *********************************** */
+.fondo-contacto {
+    max-width: 100%;
+}
+
+fieldset {
+    margin-top: 3rem;
+
+}
+
+legend {
+
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+fieldset>div {
+    margin-bottom: 3rem;
+    width: 100%;
+
+
+}
+
+label {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+input {
+    height: 3rem;
+    padding: 2rem;
+
+}
+
+input,
+textarea {
+    width: 100%;
+
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid#0ef;
+    resize: none;
+}
+
+input:hover,
+textarea:hover {
+    background: linear-gradient(to bottom, cyan, white);
+}
+
+.fuente {
+    font-size: 2rem;
+}
+
+.boton-form {
+
+    display: block;
+    margin: 3rem auto 0 auto;
+    width: 50%;
+    border: none;
+    background: #666;
+    color: #fff;
+    font-size: 2rem;
+
+}
